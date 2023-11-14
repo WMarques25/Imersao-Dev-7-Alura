@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pt-br" >
 <head>
   <meta charset="UTF-8">
   <title>Well - Mentalista - Projeto Alura</title>
@@ -18,6 +18,15 @@
     <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
     <img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Ilustra%C3%A7%C3%A3o-c%C3%A9rebro+1.png">
   </a>
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      wait = setTimeout(function() {
+        document.querySelector('.container').classList.add('hide');
+      }, 5000);
+      var script = document.createElement('script');
+      script.src = 'script.js';
+      document.body.appendChild(script);
+    });
+  </script>
 </body>
 </html>
