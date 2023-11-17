@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Imersão Dev
+  </title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <a href="https://www.playgwent.com/pt-BR">
+    <img src="https://www.playgwent.com/build/img/logo/logo-gwent-big-en-7c21928f.png" style="margin-right: -15px; margin-left: 15px; float: left; height: 80px;">
+  </a>
+  <h1 style="margin-right: 30px;">Campeonato de Gwent</h1>
+  <div style="display: flex; justify-content: center; align-items: center; height: 5vh;">
+    <input type="text" id="nomeJogador" placeholder="Nome do Jogador"  
+      onkeydown="if (event.keyCode == 13) document.getElementById('adicionarJogador').click()">
+    <button id="adicionarJogador" onclick="adicionarJogador()">Adicionar Jogador</button>
+    <button id="zerarPontos" onclick="zerarPontos()">Zerar Pontos</button>
+    <button id="limparTabela" onclick="limparTabela()">Limpar Tabela</button>
+  </div>
+  <div style="display: flex; justify-content: center; height: 5vh;">
+  <table style="width:90%">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Vitórias</th>
+        <th>Empates</th>
+        <th>Derrotas</th>
+        <th>Pontos</th>
+        <th colspan="3">Ações</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaJogadores">
+    </tbody>
+  </table>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
